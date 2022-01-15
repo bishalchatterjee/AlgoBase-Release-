@@ -144,6 +144,86 @@ tools:context=".ProblemsFragment"
 
                 <include layout="@layout/p_40" />
 
+                <include layout="@layout/p_41" />
+
+                <include layout="@layout/p_42" />
+
+                <include layout="@layout/p_43" />
+
+                <include layout="@layout/p_44" />
+
+                <include layout="@layout/p_45" />
+
+                <include layout="@layout/p_46" />
+
+                <include layout="@layout/p_47" />
+
+                <include layout="@layout/p_48" />
+
+                <include layout="@layout/p_49" />
+
+                <include layout="@layout/p_50" />
+
+                <include layout="@layout/p_51" />
+
+                <include layout="@layout/p_52" />
+
+                <include layout="@layout/p_53" />
+
+                <include layout="@layout/p_54" />
+
+                <include layout="@layout/p_55" />
+
+                <include layout="@layout/p_56" />
+
+                <include layout="@layout/p_57" />
+
+                <include layout="@layout/p_58" />
+
+                <include layout="@layout/p_59" />
+
+                <include layout="@layout/p_60" />
+
+                <include layout="@layout/p_61" />
+
+                <include layout="@layout/p_62" />
+
+                <include layout="@layout/p_63" />
+
+                <include layout="@layout/p_64" />
+
+                <include layout="@layout/p_65" />
+
+                <include layout="@layout/p_66" />
+
+                <include layout="@layout/p_67" />
+
+                <include layout="@layout/p_68" />
+
+                <include layout="@layout/p_69" />
+
+                <include layout="@layout/p_70" />
+
+                <include layout="@layout/p_71" />
+
+                <include layout="@layout/p_72" />
+
+                <include layout="@layout/p_73" />
+
+                <include layout="@layout/p_74" />
+
+                <include layout="@layout/p_75" />
+
+                <include layout="@layout/p_76" />
+
+                <include layout="@layout/p_77" />
+
+                <include layout="@layout/p_78" />
+
+                <include layout="@layout/p_79" />
+
+                <include layout="@layout/p_80" />
+
 
                 <TextView
                     android:layout_width="match_parent"

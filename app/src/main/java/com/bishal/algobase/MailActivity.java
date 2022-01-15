@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -26,7 +28,7 @@ public class MailActivity extends AppCompatActivity {
     TextView feedback_email;
     EditText feedback_content;
     Button send_Btn;
-    int i=10;
+    LottieAnimationView animationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +44,19 @@ public class MailActivity extends AppCompatActivity {
         send_Btn=findViewById(R.id.send_Btn);
 
 
+        //lottie animation declaration
+        animationView = findViewById(R.id.animation_view);
+        animationView.setVisibility(View.GONE);
+
+
         //using javax api to send mail in app without opening gmail
         send_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MailActivity.this, "Processing Feedback!", Toast.LENGTH_SHORT).show();
+                //lottie animation trigger
+                animationView.setVisibility(View.VISIBLE);
+                animationView.playAnimation();
                 final String username = "appprojectalgobase@gmail.com";
                 final String password = "algobase";
                 String messageToSend = feedback_content.getText().toString();

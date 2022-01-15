@@ -90,6 +90,22 @@
             android:paddingEnd="10dp"
             android:text="Send"
             android:textColor="@color/theme_text" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_alignStart="@+id/send_Btn"
+            android:layout_alignEnd="@+id/send_Btn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-128dp"
+            android:layout_marginTop="679dp"
+            android:layout_marginEnd="-127dp"
+            android:layout_marginBottom="33dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/lottie_send_animation" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
