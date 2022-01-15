@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/p_35"
+            android:id="@+id/p_75"
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:layout_margin="10dp"
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:fontFamily="@font/krona_one"
-                android:text="35. Median of two sorted arrays of equal size."
+                android:text="75. Find the first repeated word in string."
                 android:textColor="#FAF2F2"
                 android:textSize="10sp"
                 android:textStyle="normal" />
@@ -44,7 +44,7 @@
                 android:fontFamily="@font/quicksandlight"
                 android:gravity="bottom|right"
                 android:padding="10dp"
-                android:text="Hard"
+                android:text="Easy"
                 android:textColor="#EFE9E9" />
 
         </com.google.android.material.card.MaterialCardView>

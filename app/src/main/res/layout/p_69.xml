@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/p_29"
+            android:id="@+id/p_69"
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:layout_margin="10dp"
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:fontFamily="@font/krona_one"
-                android:text="29. Trapping rain water problem."
+                android:text="69. Count of number of given string in 2D character array"
                 android:textColor="#FAF2F2"
                 android:textSize="10sp"
                 android:textStyle="normal" />

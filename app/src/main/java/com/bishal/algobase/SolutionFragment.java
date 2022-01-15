@@ -39,6 +39,7 @@ public class SolutionFragment extends Fragment {
                 webView.setHorizontalScrollBarEnabled(false);
 
                 webView.getSettings().setLoadWithOverviewMode(true);
+                webView.getSettings().setUserAgentString("AlgoBase");
 
 
 

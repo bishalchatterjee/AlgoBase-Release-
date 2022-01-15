@@ -6,4 +6,5 @@
     tools:context=".InformationFragment"
     android:id="@+id/frame_layout4">
 
+
 </FrameLayout>

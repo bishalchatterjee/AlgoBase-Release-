@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/p_13"
+            android:id="@+id/p_53"
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:layout_margin="10dp"

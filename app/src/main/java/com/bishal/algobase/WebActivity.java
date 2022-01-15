@@ -48,6 +48,7 @@ public class WebActivity extends AppCompatActivity {
             webView.setHorizontalScrollBarEnabled(false);
 
             webView.getSettings().setLoadWithOverviewMode(true);
+            webView.getSettings().setUserAgentString("AlgoBase");
             webView.loadUrl(value);
 
             //download functionality to view downloaded pdf-files

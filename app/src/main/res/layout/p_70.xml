@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/p_30"
+            android:id="@+id/p_70"
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:layout_margin="10dp"
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:fontFamily="@font/krona_one"
-                android:text="30. Chocolate distribution problem."
+                android:text="70. Search a Word in a 2D Grid of characters."
                 android:textColor="#FAF2F2"
                 android:textSize="10sp"
                 android:textStyle="normal" />

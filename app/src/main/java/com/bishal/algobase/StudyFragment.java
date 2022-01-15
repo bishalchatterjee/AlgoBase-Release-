@@ -9,6 +9,9 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationSet;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -85,6 +88,28 @@ public class StudyFragment extends Fragment {
         //online compilers
         compiler1_iv = view.findViewById(R.id.compiler1_iv);
 
+        //Rotation animation of menu iv
+        AnimationSet animSet2 = new AnimationSet(true);
+        animSet2.setInterpolator(new DecelerateInterpolator());
+        animSet2.setFillAfter(true);
+        animSet2.setFillEnabled(true);
+        final RotateAnimation animRotate2 = new RotateAnimation(0.0f, 360.0f,
+                RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+                RotateAnimation.RELATIVE_TO_SELF, 0.5f);
+
+        animRotate2.setDuration(2500);
+        animRotate2.setFillAfter(true);
+        animSet2.addAnimation(animRotate2);
+
+        menu_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                menu_iv.startAnimation(animSet2);
+                Intent i = new Intent(getActivity(), MenuActivity.class);
+                startActivity(i);
+            }
+        });
+
 
         //to check if device is connected to internet
         ConnectivityManager mConnectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -110,13 +135,6 @@ public class StudyFragment extends Fragment {
         }
 
 
-        menu_iv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getActivity(), MenuActivity.class);
-                startActivity(i);
-            }
-        });
 
 
         //start of Road-Map on click listeners
@@ -124,7 +142,6 @@ public class StudyFragment extends Fragment {
         androiddev_iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 //Using Bundle to send data to Solution fragment
                 Bundle bundle = new Bundle();
                 bundle.putString("YourKey", "https://roadmap.sh/android");

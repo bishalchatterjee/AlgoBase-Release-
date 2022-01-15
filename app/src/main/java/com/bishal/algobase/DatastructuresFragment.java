@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationSet;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 
 import androidx.cardview.widget.CardView;
@@ -13,7 +16,7 @@ import androidx.fragment.app.Fragment;
 
 public class DatastructuresFragment extends Fragment {
 
-    ImageView menu_iv;
+    ImageView menu_iv, visualise_img1,visualise_img2,visualise_img3,visualise_img4,visualise_img5,visualise_img6,visualise_img7,visualise_img8,visualise_img9,visualise_img10;
     CardView ds_item_1,ds_item_2,ds_item_3,ds_item_4,ds_item_5,ds_item_6,ds_item_7,ds_item_8,ds_item_9,ds_item_10;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,9 +39,48 @@ public class DatastructuresFragment extends Fragment {
         ds_item_10=view.findViewById(R.id.ds_item_10);
 
 
+        visualise_img1= view.findViewById(R.id.visualize1);
+        visualise_img2= view.findViewById(R.id.visualize2);
+        visualise_img3= view.findViewById(R.id.visualize3);
+        visualise_img4= view.findViewById(R.id.visualize4);
+        visualise_img5= view.findViewById(R.id.visualize5);
+        visualise_img6= view.findViewById(R.id.visualize6);
+        visualise_img7= view.findViewById(R.id.visualize7);
+        visualise_img8= view.findViewById(R.id.visualize8);
+        visualise_img9= view.findViewById(R.id.visualize9);
+        visualise_img10= view.findViewById(R.id.visualize10);
+
+        //Rotation animation of visualize iv
+        AnimationSet animSet = new AnimationSet(true);
+        animSet.setInterpolator(new DecelerateInterpolator());
+        animSet.setFillAfter(true);
+        animSet.setFillEnabled(true);
+
+        final RotateAnimation animRotate = new RotateAnimation(0.0f, -360.0f,
+                RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+                RotateAnimation.RELATIVE_TO_SELF, 0.5f);
+
+        animRotate.setDuration(1500);
+        animRotate.setFillAfter(true);
+        animSet.addAnimation(animRotate);
+
+        //Rotation animation of menu iv
+        AnimationSet animSet2 = new AnimationSet(true);
+        animSet2.setInterpolator(new DecelerateInterpolator());
+        animSet2.setFillAfter(true);
+        animSet2.setFillEnabled(true);
+        final RotateAnimation animRotate2 = new RotateAnimation(0.0f, 360.0f,
+                RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+                RotateAnimation.RELATIVE_TO_SELF, 0.5f);
+
+        animRotate2.setDuration(2500);
+        animRotate2.setFillAfter(true);
+        animSet2.addAnimation(animRotate2);
+
         menu_iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menu_iv.startAnimation(animSet2);
                 Intent i = new Intent(getActivity(), MenuActivity.class);
                 startActivity(i);
             }
@@ -46,10 +88,10 @@ public class DatastructuresFragment extends Fragment {
 
 
 
-
         ds_item_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                visualise_img1.startAnimation(animSet);
                 //replace the fragment layout to another frgment it info frag
                 //use setter getter to pass layout id
                 Bundle bundle = new Bundle();
@@ -62,6 +104,7 @@ public class DatastructuresFragment extends Fragment {
         ds_item_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                visualise_img2.startAnimation(animSet);
                 //replace the fragment layout to another frgment it info frag
                 //use setter getter to pass layout id
                 Bundle bundle = new Bundle();
@@ -74,6 +117,7 @@ public class DatastructuresFragment extends Fragment {
         ds_item_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                visualise_img3.startAnimation(animSet);
                 //replace the fragment layout to another frgment it info frag
                 //use setter getter to pass layout id
                 Bundle bundle = new Bundle();
@@ -86,6 +130,7 @@ public class DatastructuresFragment extends Fragment {
         ds_item_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                visualise_img4.startAnimation(animSet);
                 //replace the fragment layout to another frgment it info frag
                 //use setter getter to pass layout id
                 Bundle bundle = new Bundle();
@@ -98,6 +143,7 @@ public class DatastructuresFragment extends Fragment {
         ds_item_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                visualise_img5.startAnimation(animSet);
                 //replace the fragment layout to another frgment it info frag
                 //use setter getter to pass layout id
                 Bundle bundle = new Bundle();
@@ -110,6 +156,7 @@ public class DatastructuresFragment extends Fragment {
         ds_item_6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                visualise_img6.startAnimation(animSet);
                 //replace the fragment layout to another frgment it info frag
                 //use setter getter to pass layout id
                 Bundle bundle = new Bundle();
@@ -122,6 +169,7 @@ public class DatastructuresFragment extends Fragment {
         ds_item_7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                visualise_img7.startAnimation(animSet);
                 //replace the fragment layout to another frgment it info frag
                 //use setter getter to pass layout id
                 Bundle bundle = new Bundle();
@@ -134,6 +182,7 @@ public class DatastructuresFragment extends Fragment {
         ds_item_8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                visualise_img8.startAnimation(animSet);
                 //replace the fragment layout to another frgment it info frag
                 //use setter getter to pass layout id
                 Bundle bundle = new Bundle();
@@ -146,6 +195,7 @@ public class DatastructuresFragment extends Fragment {
         ds_item_9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                visualise_img9.startAnimation(animSet);
                 //replace the fragment layout to another frgment it info frag
                 //use setter getter to pass layout id
                 Bundle bundle = new Bundle();
@@ -158,6 +208,7 @@ public class DatastructuresFragment extends Fragment {
         ds_item_10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                visualise_img10.startAnimation(animSet);
                 //replace the fragment layout to another frgment it info frag
                 //use setter getter to pass layout id
                 Bundle bundle = new Bundle();

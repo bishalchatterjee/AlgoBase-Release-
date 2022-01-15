@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:fontFamily="@font/krona_one"
-                android:text="39. Find median in a row wise sorted matrix."
+                android:text="79. Find the smallest window that contains all characters of string itself."
                 android:textColor="#FAF2F2"
                 android:textSize="10sp"
                 android:textStyle="normal" />
@@ -44,7 +44,7 @@
                 android:fontFamily="@font/quicksandlight"
                 android:gravity="bottom|right"
                 android:padding="10dp"
-                android:text="Easy"
+                android:text="Medium"
                 android:textColor="#EFE9E9" />
 
         </com.google.android.material.card.MaterialCardView>

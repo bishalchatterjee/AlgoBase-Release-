@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/p_34"
+            android:id="@+id/p_74"
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:layout_margin="10dp"
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:fontFamily="@font/krona_one"
-                android:text="34. Minimum number of operations required to make an array palindrome."
+                android:text="74.Number of flips to make binary string alternate."
                 android:textColor="#FAF2F2"
                 android:textSize="10sp"
                 android:textStyle="normal" />
