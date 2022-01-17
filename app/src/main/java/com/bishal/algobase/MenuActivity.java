@@ -62,7 +62,7 @@ public class MenuActivity extends AppCompatActivity implements AdapterView.OnIte
     public void shareApp(){
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "Hey Check Out This App At: https://play.google.com/store/apps/details?id=com.bishal.algobase" + BuildConfig.APPLICATION_ID);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "Hey Check Out This App At: https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID);
         sendIntent.setType("text/plain");
         startActivity(sendIntent);
     }
