@@ -7,10 +7,37 @@
     tools:context=".DatastructuresFragment"
     android:id="@+id/frame_layout3">
 
+    <LinearLayout
+        android:id="@+id/Youtube_Layout"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:background="@drawable/thin_border"
+            android:padding="10dp"
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:autoPlay="false"
+            app:showSeekBar="true"
+            app:showVideoCurrentTime="true"
+            app:showVideoDuration="true"
+            app:showYouTubeButton="false"
+            app:showFullScreenButton="true"/>
+    </LinearLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/MainArea"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/theme_back">
+
 
         <ScrollView
             android:id="@+id/scrollView2"
@@ -79,6 +106,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.285" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

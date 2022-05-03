@@ -66,5 +66,8 @@ dependencies {
     // Lottie dependency
     implementation "com.airbnb.android:lottie:3.4.0"
 
+    //YoutubeVideoPlaying
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+
 
 }

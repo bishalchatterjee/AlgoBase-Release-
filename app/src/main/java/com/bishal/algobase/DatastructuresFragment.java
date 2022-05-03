@@ -9,15 +9,24 @@ import android.view.animation.AnimationSet;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
 
 public class DatastructuresFragment extends Fragment {
 
     ImageView menu_iv, visualise_img1,visualise_img2,visualise_img3,visualise_img4,visualise_img5,visualise_img6,visualise_img7,visualise_img8,visualise_img9,visualise_img10;
     CardView ds_item_1,ds_item_2,ds_item_3,ds_item_4,ds_item_5,ds_item_6,ds_item_7,ds_item_8,ds_item_9,ds_item_10;
+    ConstraintLayout MainArea;
+    LinearLayout Youtube_Layout;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -25,6 +34,10 @@ public class DatastructuresFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_datastructures, container, false);
         menu_iv=view.findViewById(R.id.menu_iv);
 
+
+        MainArea=view.findViewById(R.id.MainArea);
+        Youtube_Layout=view.findViewById(R.id.Youtube_Layout);
+        Youtube_Layout.setVisibility(View.GONE);
 
         //ds items linking
         ds_item_1=view.findViewById(R.id.ds_item_1);
@@ -219,9 +232,27 @@ public class DatastructuresFragment extends Fragment {
             }
         });
 
+        //Visualize linker
+        visualise_img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                visualise_img1.startAnimation(animSet);
+                Youtube_Layout.setVisibility(View.VISIBLE);
+                MainArea.setVisibility(View.GONE);
+                YouTubePlayerView youTubePlayerView = view.findViewById(R.id.youtube_player_view);
+                getLifecycle().addObserver(youTubePlayerView);
 
-
+                youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
+                    @Override
+                    public void onReady(@NonNull YouTubePlayer youTubePlayer) {
+                        String videoId = "p5TDnxAYAZY";
+                        youTubePlayer.loadVideo(videoId, 0);
+                    }
+                });
+            }
+        });
 
         return view;
     }
+
 }
